@@ -1,0 +1,39 @@
+<template >
+<div class="slds-box slds-theme_default">
+      <template if:false={check}>
+        <lightning-combobox
+             
+               value={value}
+               options={options}
+               onchange={handleChange}>
+   </lightning-combobox>
+   <p>Selected value is: {value}</p>
+   <lightning-input type="date" name="input8" label="startDate" value=""></lightning-input>
+   <lightning-input type="date" name="input8" label="EndDate" value=""></lightning-input>
+  <div style="padding:0.5rem">
+       <lightning-button variant="brand" label="Next" title="titleName" onclick={handleClick} class="slds-align_absolute-center" ></lightning-button>
+  
+      </div>
+      </template>
+      
+   
+<template if:true={check}>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="Id"
+                data={Listofrecords}
+                columns={columns}>
+                
+        </lightning-datatable>
+    </div>
+    <div style="padding:0.5rem">
+   <lightning-button  variant="destructive" label="previous" onclick={refreshComponent} class="slds-align_absolute-left"></lightning-button>
+
+</div>
+<div style="padding:0.5rem">
+    <lightning-button variant="brand" label="Selected" class="slds-align_absolute-right" title={label} onclick={navigateNext} value={value}></lightning-button>
+</div>
+</template>
+  
+    </div>
+</template>

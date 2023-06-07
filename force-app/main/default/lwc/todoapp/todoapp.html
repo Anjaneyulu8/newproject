@@ -1,0 +1,110 @@
+<template>
+
+<lightning-card  variant="Narrow"  title="Todo" icon-name="standard:account">
+  
+
+ 
+
+<template for:each={inputvalu} for:item="abc">
+    <div key={abc.id}>
+        {abc.inputvalue1}
+
+        </div>
+
+
+
+</template>
+
+
+
+
+<!-- 
+
+
+ <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+     <tr class="slds-line-height_reset">
+
+
+
+
+          <td>
+                                     {inputvalu} 
+                                    </td>
+                                <td>
+                                    <div class="slds-truncate">
+                                         
+      {deltevalue} <lightning-button-icon icon-name="utility:delete"    alternative-text="Delete"   class="test slds-m-left_xx-small" title="Delete" onclick={handleClick}></lightning-button-icon>
+
+                                    </div>
+                                </td>
+                               
+                                </tr>
+                                </table>
+     
+
+
+
+
+
+ -->
+
+
+
+
+
+
+ <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+    
+                        <tr class="slds-line-height_reset">
+                                <td>
+                                  
+                                         <lightning-input type="text" variant="standard" name="name"  placeholder="type here..." ></lightning-input>
+                           
+                                </td>
+                             
+                            
+                                    <td>
+                                        <lightning-button variant="base" label="Add" title="titleName" onclick={datahandler}></lightning-button>
+                                        </td>
+                       
+                                       </tr>
+
+
+
+
+
+                        
+                                </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</lightning-card>
+
+
+
+
+
+
+
+
+
+</template>

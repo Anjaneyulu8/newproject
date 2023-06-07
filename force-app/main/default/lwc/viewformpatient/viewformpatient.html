@@ -1,0 +1,80 @@
+<template>
+
+
+    
+
+    <lightning-card title="List of Patients" icon-name="custom:custom63">
+
+
+
+        <lightning-layout vertical-align="center">
+
+
+
+            <lightning-layout-item padding="around-small">
+
+
+
+               <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+
+
+
+                   <thead>
+
+
+
+                      <tr>
+
+
+
+                        <th>Patient Name</th>  
+
+                        <th>Delete</th>
+
+                       </tr>
+
+
+
+                   </thead>
+
+
+
+                   <tbody>
+
+
+
+                <template for:each={PatientList.data} for:item="patient">
+
+
+
+                 
+
+
+
+                     <tr  key={patient.Name}><td>
+
+
+
+                        {patient.Name}</td>                
+
+<td>
+
+    <lightning-button icon-name="utility:delete" label="Delete"   variant="brand"    onclick={DeleteAction} value={patient.Id}></lightning-button>
+
+</td>
+
+                    </tr>
+
+                </template>
+
+            </tbody>
+
+                </table>
+
+            </lightning-layout-item>
+
+        </lightning-layout>
+
+    </lightning-card>
+
+    </template>

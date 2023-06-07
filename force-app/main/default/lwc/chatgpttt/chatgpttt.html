@@ -1,0 +1,15 @@
+<template>
+   <lightning-card  variant="Narrow"  title="ChatGpt">
+        <lightning-input type="text" variant="standard" name="name" label="Search" onchange={handleInputChange}></lightning-input>
+    <lightning-button variant="brand" label="Submit" title="titleName" onclick={handleButtonClick}>
+    </lightning-button>
+    <br/><br/>
+		<span>{outputText}</span>
+      <template if:true={variable}>
+    <lightning-spinner variant="brand" size="large"></lightning-spinner>
+    
+</template>
+      
+   </lightning-card>
+   
+</template>

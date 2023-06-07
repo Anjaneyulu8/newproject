@@ -1,0 +1,12 @@
+<apex:page standardController="Account" lightningStylesheets="true">
+
+<apex:pageBlock >
+
+<apex:pageBlockSection title="contact">
+    <apex:relatedList list="contacts">
+    </apex:relatedList>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+
+</apex:page>

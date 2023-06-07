@@ -1,0 +1,20 @@
+<template>
+  <h1>Parent Component</h1>
+    <c-childcomponent get-value-from-parent={ab}></c-childcomponent>
+   
+   <div>
+     <lightning-input type="text" variant="standard" name="name" label="text_field" placeholder="type here..." onkeyup={handle}></lightning-input>
+     </div>
+
+     <p>{ab}</p>
+
+<lightning-input type="number" variant="standard" name="name" label="Name" placeholder="type here..." onkeyup={chandle}></lightning-input>
+<lightning-input type="text" variant="standard" name="name" label="label" placeholder="type here..." onkeyup={chandle}></lightning-input>
+<lightning-input type="Email" variant="standard" name="name" label="Email" placeholder="type here..." onkeyup={chandle}></lightning-input>
+
+<lightning-button variant="base" label="labelName" title="titleName" onclick={submit}></lightning-button>
+
+
+
+
+  </template>

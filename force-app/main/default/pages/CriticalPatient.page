@@ -1,0 +1,15 @@
+<apex:page controller="crticalPatient" lightningStylesheets="true">
+   <apex:form >
+
+<apex:pageBlock title="Critical_Patient" id="Block">
+
+<apex:pageBlockTable value="{!varr}" var="c">
+     <apex:column value="{!c.Patient_Name__c}"/>
+<apex:column value="{!c.illness_issue__c}"/>
+   
+
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+    </apex:form>
+</apex:page>

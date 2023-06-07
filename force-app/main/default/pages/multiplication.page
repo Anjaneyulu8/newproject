@@ -1,0 +1,23 @@
+<apex:page controller="multiplicationTable">
+<apex:form style="width:50%;">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:outputLabel >Number</apex:outputLabel>
+            <apex:inputText value="{!num}"/>
+            
+            <apex:outputLabel >Multiplication </apex:outputLabel>
+            <apex:inputText value="{!multiply}"/>
+            
+            <apex:commandButton value="Generate Table" action="{!generatetable}"/>
+            <apex:commandButton value="Clear Table" action="{!cleartable}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockTable value="{!Tablelist}" var="row" rendered="{!tablelist.size>0}">
+            <apex:column value="{!row.num}" headerValue="Number"/>
+            <apex:column >X</apex:column>
+            <apex:column value="{!row.mutiplicationfactor}" headerValue="Mutiplication Factor"/>
+            <apex:column >=</apex:column>
+            <apex:column value="{!row.Product}" headerValue="Product"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

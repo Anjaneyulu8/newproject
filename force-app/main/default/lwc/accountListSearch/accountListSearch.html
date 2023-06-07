@@ -1,0 +1,22 @@
+<template>
+<input type="text" onkeyup={method}>
+<p>{va}</p>
+<template for:each={a} for:item="obj">
+    <div key={obj}>
+        {obj}
+    </div>
+
+</template>
+<template for:each={myquestions} for:item="ob">
+    <div key={ob.id}>
+       {ob.id}
+       <div>
+       {ob.Question}</div>
+     <input type="radio" name={ob.id} value="a"/>{ob.answers.a}
+     <input type="radio" name={ob.id} value="b"/>{ob.answers.b}
+        </div>
+        
+</template>
+<lightning-button variant="base" label="submit"  onclick={handleClick}></lightning-button>
+<lightning-button variant="base" label="rest"  onclick={handleClick}></lightning-button>
+</template>

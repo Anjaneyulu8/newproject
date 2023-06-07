@@ -1,0 +1,6 @@
+<template>
+  <lightning-button label="Make API Call" onclick={handleClick}></lightning-button>
+  <template if:true={response}>
+    <p>Response: {response}</p>
+  </template>
+</template>

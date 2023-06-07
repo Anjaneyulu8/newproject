@@ -1,0 +1,9 @@
+<template>
+    <div class="slds-m-around_medium">
+        <form onsubmit={handleSubmit}>
+            <lightning-input label="Username" type="text" name="username" value={username} onchange={handleUsernameChange} required></lightning-input>
+            <lightning-input label="Password" type="password" name="password" value={password} onchange={handlePasswordChange} required></lightning-input>
+            <lightning-button variant="brand" type="submit">Sign In</lightning-button>
+        </form>
+    </div>
+</template>

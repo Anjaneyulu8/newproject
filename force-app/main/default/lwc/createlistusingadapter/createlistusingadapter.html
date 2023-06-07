@@ -1,0 +1,14 @@
+<template>
+<lightning-card  variant="Narrow"  title="Contact_list" icon-name="standard:account">
+    <template for:each={contacts} for:item="obj">
+        <div key={obj.id}>
+               Account Name Is {obj.fields.Account.displayValue}
+                &nbsp;
+                &nbsp;   Contact Name Is                
+                {obj.fields.Name.value}
+        </div>
+        </template>
+        
+
+</lightning-card>
+</template>

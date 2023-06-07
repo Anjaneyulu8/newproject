@@ -1,0 +1,29 @@
+<apex:page controller="New_account_add_01" lightningStylesheets="true">
+    <apex:form id="form">
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Account Information">
+            
+         <apex:inputField value="{!acc.Name}"/>
+              <apex:inputField value="{!acc.Type}"/>
+            
+            <apex:actionRegion >            
+           Account Rating-  <apex:inputField value="{!acc.Rating}">
+                <apex:actionSupport event="onchange" reRender="form" />
+                </apex:inputField>
+            </apex:actionRegion>
+             
+        </apex:pageBlockSection>
+        
+       
+        <apex:pageBlockSection title="Addition_info" id="Bk1" rendered="{!IF(acc.Rating =='Hot',True,False)}">
+            <apex:inputField value="{!acc.AnnualRevenue}"/>
+             <apex:inputField value="{!acc.Montly_Revenue__c}"/>
+        </apex:pageBlockSection>
+        
+        
+        
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,88 @@
+<template>
+
+
+	<template class="name3" if:false={candidatebtn}>
+        <lightning-card variant="Narrow" title="Search" icon-name="standard:account">
+
+		<lightning-button variant="base" label="New" title="titleName" onclick={createcandidate} class="abc">
+		</lightning-button>
+        	
+		
+			<lightning-input type="text" variant="standard" name="name" label="Search" placeholder="type here..."
+				onchange={searchkey}></lightning-input>
+
+			<lightning-datatable key-field="id" data={finalrecord} columns={col} onrowaction={handleRowAction}>
+              
+			</lightning-datatable>
+             
+             
+		</lightning-card>
+	
+	</template>
+
+    	<template class="name2"  if:true={candidatebtn}>
+		<lightning-card variant="Narrow" title="Create Candidate" icon-name="standard:account">
+			<div class="slds-p-around_medium">
+				<form>
+					<lightning-input type="text" variant="standard" name="Name" label="Candidate Name"
+						placeholder="Name" onchange={fieldvalues}></lightning-input>
+					<lightning-input type="text" variant="standard" name="Skills__c" label="Skills"
+						onchange={fieldvalues}></lightning-input>
+
+					<lightning-input type="email" variant="standard" name="Email__c" label="Email"
+						onchange={fieldvalues}></lightning-input>
+
+					<lightning-input type="tel" variant="standard" name="phone__c" label="Phone" onchange={fieldvalues}>
+					</lightning-input>
+
+
+					<lightning-button variant="base" label="Save" title="titleName" onclick={HandleSave}>
+					</lightning-button>
+				</form>
+			</div>
+		</lightning-card>
+	</template>
+
+
+
+
+
+
+
+
+
+
+
+ <lightning-button variant="base" label="Next" title="titleName" onclick={getSelectedRec}></lightning-button>
+
+<template class="selectedtable">
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+
+    <lightning-datatable
+    key-field="id"
+    data={selectedRecords}
+    show-row-number-column
+    row-number-offset={rowOffset}
+    hide-checkbox-column
+    columns={cols}
+    >
+</lightning-datatable>
+</lightning-card>
+
+
+</template>
+
+
+
+
+
+<!-- 
+
+<template for:each={selectedRecords} for:item="obj">
+    <div key={obj.id}>
+        {obj.Name}
+    </div>
+</template> -->
+
+
+</template>

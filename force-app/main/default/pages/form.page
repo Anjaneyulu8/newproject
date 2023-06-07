@@ -1,0 +1,24 @@
+<apex:page standardController="Employee_details__c">
+    <apex:form >
+            #s{
+            text-align: center;
+            
+        
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Employee Details" columns="3">
+            <apex:inputField label="Employee name" value="{!Employee_details__c.Employee_Name__c}"/>
+              <apex:inputField label="Employee Email" value="{!Employee_details__c.Email_Id__c}"/>
+              <apex:inputField label="Employee phone" value="{!Employee_details__c.phone_no__c}"/>
+              <apex:inputField label="Employee Desigination" value="{!Employee_details__c.Desigination__c}"/>
+              <apex:inputField label="Employee salary" value="{!Employee_details__c.Salary__c}"/>
+            <apex:inputField label="Employee DOB" value="{!Employee_details__c.Date_of_birth__c}"/>
+            <apex:commandButton value="save" id="s" action="{!Save}"/>
+
+
+        
+        </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

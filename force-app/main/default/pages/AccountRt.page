@@ -1,0 +1,13 @@
+<apex:page controller="AccountRating">
+    <apex:pageBlock >
+   
+        <apex:pageBlockTable value="{!groupedResults}" var="z">
+       <apex:column value="{!z['rating']}"/>
+                 <apex:column value="{!z['a']}"/>
+
+        </apex:pageBlockTable>
+        
+        
+      
+    </apex:pageBlock>
+</apex:page>

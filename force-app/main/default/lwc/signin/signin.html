@@ -1,0 +1,87 @@
+<template>
+  <div class="background">
+ <header class="slds-p-around_medium slds-text-heading_medium">
+  <lightning-layout class="slds-grid slds-wrap">
+    <lightning-layout-item size="1" class="slds-align-middle">
+      <lightning-icon icon-name="standard:home" alternative-text="Home"></lightning-icon>
+    </lightning-layout-item>
+    <lightning-layout-item size="10">
+      <lightning-layout class="slds-align_absolute-center">
+        <lightning-layout-item size="9">
+          <lightning-input  placeholder="Search"></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="1" class="slds-text-align_right">
+          <lightning-icon icon-name="standard:search" alternative-text="Search"></lightning-icon>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-layout-item>
+    <lightning-layout-item size="1" class="slds-text-align_right slds-align-middle">
+      <lightning-icon icon-name="standard:user" alternative-text="User" onclick={iconformopenclose}></lightning-icon>
+    </lightning-layout-item>
+  </lightning-layout>
+</header>
+<div class="container">
+    <div class="slds-m-around_medium">
+      <template if:true={loginFormVisible}>
+        <lightning-card class="slds-m-top_large">
+          <h1 class="slds-text-heading_large slds-text-heading_strong slds-text-align_center slds-m-bottom_large slds-text-color_default">LOGIN</h1>
+          <div class="slds-p-horizontal_medium slds-p-vertical_large">
+            <lightning-layout>
+              <lightning-layout-item size="12">
+                <div class="slds-form slds-form_stacked slds-align_absolute-center">
+                  <lightning-input label="Username" data-id="username" type="text" class="slds-m-bottom_medium"></lightning-input>
+                  <lightning-input label="Password" data-id="password" type="password" class="slds-m-bottom_medium"></lightning-input>
+                  <div class="slds-m-top_medium">
+                    <lightning-button label="Login" variant="brand" onclick={handleLogin} class="slds-align_absolute-center"></lightning-button>
+                    
+                  </div>
+                  <div class="slds-m-top_medium slds-text-align_center">
+                    <a href="javascript:void(0);" onclick={toggleSignup}>Don't have an account? Sign up here.</a>
+                  </div>
+                </div>
+              </lightning-layout-item>
+            </lightning-layout>
+          </div>
+        </lightning-card>
+      </template>
+      <template if:true={variable}>
+<!-- <c-my-custom-component></c-my-custom-component> -->
+<c-intel-product-controller></c-intel-product-controller>
+                    </template>
+
+      <template if:true={showSignup}>
+        <lightning-card class="slds-m-top_large">
+          <h1 class="slds-text-heading_large slds-text-heading_strong slds-text-align_center slds-m-bottom_large slds-text-color_default">SIGN UP</h1>
+          <div class="slds-p-horizontal_medium slds-p-vertical_large">
+            <lightning-layout>
+              <lightning-layout-item size="12">
+                <div class="slds-form slds-form_stacked slds-align_absolute-center">
+                  <lightning-input label="Username" data-id="signupUsername" type="text" class="slds-m-bottom_medium"></lightning-input>
+                  <lightning-input label="Email" data-id="signupEmail" type="email" class="slds-m-bottom_medium"></lightning-input>
+                  <lightning-input label="Password" data-id="signupPassword" type="password" class="slds-m-bottom_medium"></lightning-input>
+                  <div class="slds-m-top_medium">
+                    <lightning-button label="Sign up" variant="brand" onclick={handleSignup} class="slds-align_absolute-center"></lightning-button>
+                  </div>
+                  <div class="slds-m-top_medium slds-text-align_center">
+                    <a href="javascript:void(0);" onclick={toggleSignup}>Already have an account? Log in here.</a>
+                  </div>
+                </div>
+              </lightning-layout-item>
+            </lightning-layout>
+          </div>
+        </lightning-card>
+      </template>
+
+    </div>
+</div>
+  </div>
+
+
+
+
+
+
+
+
+  <footer class="slds-p-around_medium slds-text-color_weak slds-text-align_center">&copy; 2023 My Company</footer>
+</template>

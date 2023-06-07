@@ -1,0 +1,38 @@
+<template >
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+  
+
+<lightning-tabset>
+    <lightning-tab label="Item One"> 
+<template for:each={todaylistvalue} for:item="obj">
+    <div key={obj.Id}>
+      
+         <div>
+                 {obj.Name}
+              <span if:false={obj.IsCompleted__c}>
+                   <lightning-button icon-name="utility:check"  data-recordid={obj.Id} alternative-text="Settings" title="Settings" onclick={checkthedata}>
+               </lightning-button>
+ <lightning-button icon-name="utility:close"  alternative-text="Settings" title="Settings" data-recordid={obj.Id} onclick={deltedata}></lightning-button>
+  
+              </span>
+         </div>
+</div>
+</template>
+    </lightning-tab>
+   
+        <lightning-tab label="Item Two"> 
+            
+            
+        </lightning-tab>
+
+        <lightning-tab label="Item Three">
+            
+            
+            
+             Content for tab 3 </lightning-tab>
+ 
+</lightning-tabset>
+</lightning-card>
+
+
+</template>

@@ -1,0 +1,38 @@
+<apex:page standardController="Account" renderAs="pdf">
+
+<div style="font-family:Times New Roman;">
+    <h1>Account_Details</h1>
+</div>
+
+
+
+<p>
+    Account_Details
+    </p>
+
+<table>
+    <tr>
+<th>Account Name</th>
+<td><apex:outputText value="{!Account.Name}"/></td>
+</tr>
+
+<tr>
+<th>AccountNumber</th>
+<td><apex:outputText value="{!Account.AccountNumber}"/></td>
+</tr>
+
+
+
+<tr>
+<th>AnnualRevenue</th>
+<td><apex:outputText value="{!Account.AnnualRevenue}"/></td>
+</tr>
+
+
+
+
+
+
+</table>
+
+</apex:page>

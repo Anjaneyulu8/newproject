@@ -1,0 +1,29 @@
+<template>
+    
+
+    <lightning-combobox
+        name="products"
+        label="Select a Product"
+        value={selectedProductId}
+        options={productOptions}
+        onchange={handleChange}>
+    </lightning-combobox>
+
+
+    <template if:true={products}>
+    <div class="products-container">
+        <template for:each={products} for:item="product">
+            <div key={product.id} class="product">
+                <img src={product.image} alt={product.name} />
+                <h3>{product.name}</h3>
+                <p>{product.description}</p>
+                <div class="product-footer">
+                    <p class="product-price">{product.price}</p>
+                    
+                    <lightning-button variant="brand" label="Add to Chart"   onclick={buyProduct}></lightning-button>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
+</template>

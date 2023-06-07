@@ -1,0 +1,11 @@
+<template>
+    <template if:true={isRecording}>
+        <p>Recording...</p>
+    </template>
+    <template if:false={isRecording}>
+        <p>Not Recording</p>
+    </template>
+    <button onclick={startRecording}>Start Recording</button>
+    <button onclick={stopRecording}>Stop Recording</button>
+    <p>{transcription}</p>
+</template>

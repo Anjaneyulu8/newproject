@@ -1,0 +1,20 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable var="a" value="{!accounts}">
+
+<apex:column headerValue="accountname">
+<apex:outputLink value="accountsdetails?id={!a.id}">{!a.name}</apex:outputLink>
+
+<apex:commandButton value="Delete" action="{!Delete}">
+   
+</apex:commandButton>
+
+
+</apex:column>
+
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

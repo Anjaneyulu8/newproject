@@ -1,0 +1,22 @@
+<aura:component controller="newaurapatentlist">
+    <aura:attribute name="patient" type="list"/>
+    <aura:handler name="init" value="{!this}" action="{!c.patientlist}"/>
+    
+    
+    
+  <lightning:input type="text" label="Search:" aura:id="test" onchange="{!c.getPatientListVal}">
+    </lightning:input>
+    <table>
+    <thead><tr><th>Patient name</th>
+        </tr></thead>
+        <tbody>
+        <aura:iteration items="{!v.patient}" var="a">
+            <tr><td>{!a.Name}</td>
+                
+            </tr>
+            <tr><td>{!a.Email_Id__c}</td></tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    
+</aura:component>

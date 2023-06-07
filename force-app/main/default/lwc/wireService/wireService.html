@@ -1,0 +1,40 @@
+<template>
+    <div>
+        {UserId}
+        </div>
+        <!-- <div>
+            {userdetails.data}
+            </div> -->
+
+<!-- 
+<template for:each={retrievedata} for:item="obj">
+<div  key={obj.Id.value}>{obj.Name.value}
+</div> -->
+<template if:true={retrievedatadataa}>
+<div>
+    {dataa.fields.id.Value}
+    {dataa.fields.Email.value}
+    </div>
+    <!-- <div>{dataa.Name.value}</div> -->
+</template>
+<!-- <p>{dataa.Name.value}</p> -->
+
+
+
+
+
+
+<lightning-card>
+  
+        <template if:true={userdata.data}>
+            <div>
+                {userdata.data.fields.Email.value}
+
+
+</div>
+        </template>
+        </lightning-card>
+
+
+
+</template>

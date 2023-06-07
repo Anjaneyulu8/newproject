@@ -1,0 +1,19 @@
+<template>
+<lightning-input type="text" variant="standard" name="name" label="Search" placeholder="Search here..." onchange={handleinput}></lightning-input>
+
+<c-childlist searchkey={inputP} onmyevent={handledata}></c-childlist>
+
+
+
+
+<lightning-datatable
+    key-field="id"
+    data={acclist}
+    show-row-number-column
+    row-number-offset={rowOffset}
+    hide-checkbox-column
+    columns={column}
+    onrowaction={handleRowAction}>
+</lightning-datatable>
+
+</template>

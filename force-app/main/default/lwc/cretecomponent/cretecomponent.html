@@ -1,0 +1,23 @@
+<template>
+<lightning-combobox
+   
+    label="Status"
+    value=""
+    placeholder="Select"
+    options={htmldata}
+    onchange={handleChange} ></lightning-combobox>
+
+
+   <lightning-datatable
+       key-field="id"
+       data={list.data}
+      
+       columns={columns}>
+      
+   </lightning-datatable>
+
+
+   <div>
+       {list.data}
+       </div>
+</template>

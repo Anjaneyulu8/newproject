@@ -1,0 +1,24 @@
+<apex:page controller="accountSearch">
+<apex:form >
+<apex:pageBlock title="Search Account">
+<apex:outputPanel >
+Account Name : <apex:inputText value="{!accVal}"/>
+    <apex:actionSupport event="onkeyup"
+                        action="{!accSearchQuery}"
+                        rerender="block"/>
+   
+</apex:outputPanel>
+</apex:pageBlock>
+ 
+
+<apex:pageBlock title="List of Account" id="block">
+ 
+    <apex:pageBlockTable value="{!accList}" var="a">
+    <apex:column value="{!a.Name}"/>
+    <apex:column value="{!a.Type}"/>
+    <apex:column value="{!a.Rating}"/>
+    </apex:pageBlockTable>
+ 
+</apex:pageBlock>
+</apex:form>
+</apex:page>

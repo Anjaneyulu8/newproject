@@ -1,0 +1,9 @@
+<apex:page controller="integerateclass">
+    <form>
+       <apex:dataTable value="{!Na}" var="val1" frame="border" cellpadding="10">
+        <apex:column value="{!val1}" headervalue="key"/>
+        
+        </apex:dataTable> 
+        
+    </form>
+</apex:page>

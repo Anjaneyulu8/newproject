@@ -1,0 +1,24 @@
+<apex:page controller="ListPaitnt" lightningStylesheets="true">
+   <apex:form >
+ <apex:pageBlock >
+Search:
+     <apex:inputText value="{!accVal}" >
+<apex:actionSupport event="onkeyup"
+                    action="{!accSearchQuery}"
+                    reRender="Block" />
+</apex:inputText>
+</apex:pageBlock>
+<apex:pageBlock title="List of Patients" id="Block">
+
+<apex:pageBlockTable value="{!varr}" var="c">
+<apex:column value="{!c.Name}"/>
+    <apex:column value="{!c.Date_of_birth__c}"/>
+    <apex:column value="{!c.Gender__c}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+
+    </apex:form>
+    
+    
+</apex:page>

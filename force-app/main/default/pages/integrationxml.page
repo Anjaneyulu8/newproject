@@ -1,0 +1,20 @@
+<apex:page controller="integerationxml" >
+    <apex:form >
+        <apex:pageBlock title="DeserailizTION">
+            <apex:panelGrid columns="3" width="600">
+                
+                <apex:inputTextarea rows="6" cols="100" value="{!val1}"/>
+                <apex:panelGrid columns="1">
+                    <apex:commandButton value="convert" action="{!xml2obdata}"/>
+                 <apex:inputTextarea rows="6" cols="100" value="{!parsedata}"/>
+                
+                </apex:panelGrid>
+            </apex:panelGrid>
+        
+        
+        </apex:pageBlock>
+    
+    
+    
+    </apex:form>
+</apex:page>

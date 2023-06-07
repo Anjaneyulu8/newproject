@@ -1,0 +1,85 @@
+<apex:page controller="AdAccount">
+    <apex:form id="form1">
+    <apex:pageBlock title="Add Account">
+        <apex:pageBlockSection columns="2">
+            <apex:inputField value="{!ac.name}"/>
+            <apex:inputField value="{!ac.type}"/>
+           
+            
+            
+             <apex:actionRegion >            
+           Account Rating-  <apex:inputField value="{!ac.Rating}">
+                <apex:actionSupport event="onchange" reRender="form1,form2" />
+                </apex:inputField>
+            </apex:actionRegion>
+            </apex:pageBlockSection>
+        
+        
+        
+        
+       
+        
+        
+          <apex:pageBlockSection title="Addition_info" id="form2"  rendered="{!IF(ac.Rating =='Hot',True,False)}">
+            <apex:inputField value="{!ac.AnnualRevenue}"/>
+             <apex:inputField value="{!ac.Montly_Revenue__c}"/>
+      </apex:pageBlockSection>
+        
+        
+         <apex:commandButton value="Save" action="{!SaveAccount}" reRender="block,form1"/>
+        
+        
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+    
+    
+    
+    
+<apex:form id="form2">
+   <apex:pageBlock title="SearchAccount">
+       AccountName:<apex:inputText value="{!VarName}">
+       <apex:actionSupport event="onkeyup"
+                           action="{!SearchAccount}"
+                           rerender="block" /> 
+       </apex:inputText>
+    </apex:pageBlock>
+    
+    
+    <apex:pageBlock title="AccountList" id="block">
+       
+     <apex:pageBlockTable value="{!listName}" var="a">
+          <apex:column value="{!a.name}"/>
+             <apex:column value="{!a.type}"/>
+                 <apex:column value="{!a.rating}"/>
+         
+         
+         
+         
+         // to delte
+         <apex:column >
+<apex:commandLink value="Delete" action="{! DelteAccount}" reRender="form2">
+<apex:param name="accid" value="{!a.id}" assignTo="{!V}"/>
+</apex:commandLink>
+</apex:column>
+
+
+                     
+        
+        
+        
+        </apex:pageBlockTable>
+    
+        
+        
+        
+    </apex:pageBlock>
+    
+    
+    
+    
+    </apex:form>
+
+
+</apex:page>

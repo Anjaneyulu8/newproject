@@ -1,0 +1,14 @@
+<template>
+    <lightning-combobox
+
+               placeholder="Select City"
+               options={options}
+               onchange={handleChange} >
+   </lightning-combobox>
+    <lightning-combobox
+               placeholder="Select Hotel"
+               options={Listofrecords}
+               onchange={handleChange} >
+   </lightning-combobox>
+   <p>Selected value is: {value}</p>
+</template>

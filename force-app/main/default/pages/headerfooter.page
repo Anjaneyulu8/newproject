@@ -1,0 +1,50 @@
+<apex:page standardStylesheets="false" title="ABC" applyBodyTag="false" contentType="application/pdf#ABC.pdf" applyHtmlTag="false"  sidebar="false" showHeader="false" renderAs="pdf">
+   <html>
+   <head>
+    <title>ABC</title>
+    <style type="text/css">
+        .leadTable{
+            margin: 10px !important;
+        }        
+        @page {
+            margin-top: 150px;
+            padding:0px;
+            margin-bottom: 90px;
+            
+            @top-left {
+                content: element(header);
+            }                           
+            @bottom-left {   
+                content: element(footer);
+            } 
+        }        
+        div.header {
+            margin-top:10px;
+            position: running(header);
+            width: 100%;
+            margin-right: 10px;
+        }
+        div.footer {                    
+            position: running(footer);
+            width: 100%;
+        }
+        .repeatTableHeader{-fs-table-paginate: paginate;}
+    </style>
+    
+    </head>
+    <body style="font-family:SansSerif !important;margin-left:12px;margin-right:12px;">
+        <div class="header">
+            HEADER CONTENTjihdfowqieubc rywec98iuwq trwue cty9potuuwei ucr8
+        </div>        
+        <div class="footer" >
+            FOOTER CONTENT
+        </div>
+        <div class="leadTable">
+            PDF CONTENT
+            <table class="repeatTableHeader">
+                <tr><td>CONTENT TO BE PAGINATED</td></tr>
+            </table>
+        </div>
+    </body>
+    </html>
+</apex:page>

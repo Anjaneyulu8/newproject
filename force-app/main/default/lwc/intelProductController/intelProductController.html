@@ -1,0 +1,9 @@
+<template>
+    <template for:each={availableBikes} for:item="bike">
+        <div key={bike.Id}>
+            <lightning-formatted-rich-text value={bike.Image__c} ></lightning-formatted-rich-text>
+            <p><strong>Name:</strong>{bike.Name}</p>
+            <p><strong>Price:</strong>{bike.Price__c}</p>
+        </div>
+	</template>
+</template>
